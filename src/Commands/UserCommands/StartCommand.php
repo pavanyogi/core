@@ -51,6 +51,10 @@ class StartCommand extends UserCommand
         //$chat_id = $message->getChat()->getId();
         //$user_id = $message->getFrom()->getId();
 
-        return Request::emptyResponse();
+//        return Request::emptyResponse();
+        return $this->replyToChat(
+            'Hi there!' . PHP_EOL .
+            'It is /start command!'
+        );
     }
 }
